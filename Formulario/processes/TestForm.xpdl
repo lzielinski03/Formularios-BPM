@@ -7,7 +7,7 @@
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            14-mar-2016 9:57:46</xpdl:Created>
+            15-mar-2016 13:03:02</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -276,12 +276,19 @@
 			flags=&quot;server&quot;&gt;
 			&lt;sourceCode
 				language=&quot;Java1&quot;&gt;Formulario formPDF = new Formulario(nombre: &amp;quot;FCAHO023&amp;quot;);
-	
-display(&amp;quot;nombre: &amp;quot; + formPDF.nombre);
-display(&amp;quot;id: &amp;quot; + formPDF.id);
-display(&amp;quot;descripcion: &amp;quot; + formPDF.descripcion);
-display(&amp;quot;path: &amp;quot; + formPDF.path);
-&lt;/sourceCode&gt;
+
+String result = &amp;quot;&amp;quot;;
+result = result + &amp;quot;nombre:\t\t\t&amp;quot; + formPDF.nombre + &amp;quot;\n&amp;quot;;
+result = result + &amp;quot;id: \t\t\t\t\t&amp;quot; + formPDF.id + &amp;quot;\n&amp;quot;;
+result = result + &amp;quot;descripcion:\t\t&amp;quot; + formPDF.descripcion + &amp;quot;\n&amp;quot;;
+result = result + &amp;quot;path:\t\t\t\t&amp;quot; + formPDF.path + &amp;quot;\n&amp;quot;;
+result = result + &amp;quot;Cantidad campos:\t\t&amp;quot; + formPDF.campos.length() + &amp;quot;\n&amp;quot;;
+
+foreach(campo in formPDF.campos) {
+	result = result + &amp;quot;\tCampo &amp;quot; + campo.label + &amp;quot;, Requerido: &amp;quot; + campo.esRequerido + &amp;quot;\n&amp;quot;;
+}
+display(result);
+formPDF.addCampo(&amp;quot;campo 22&amp;quot;, &amp;quot;valor&amp;quot;);&lt;/sourceCode&gt;
 		&lt;/method&gt;
 	&lt;/methods&gt;
 &lt;/component&gt;</albpm:Component>

@@ -11,7 +11,9 @@
 		<Bool name="esRequerido" flags="hassetter hasgetter public" position="4"/>
 		<String name="id" flags="hassetter hasgetter public" position="1"/>
 		<String name="id_formulario" flags="hassetter hasgetter public" position="2"/>
+		<Bool defaultValue="false" name="isAdded" flags="hassetter hasgetter public required includeincheck" position="5"/>
 		<String name="label" flags="hassetter hasgetter public" position="3"/>
+		<String name="valor" flags="hassetter hasgetter public includeincheck" position="6"/>
 	</attributes>
 	<methods>
 		<method name="Campo" flags="static clientavailable">

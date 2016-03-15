@@ -33,7 +33,6 @@
 <presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
@@ -43,9 +42,6 @@
 </editor>
 <editor activePart="true" focus="true" id="fuego.editor.fuegoobject" name="Formulario.xcdl" partName="Formulario" path="D:/workspace/BSC/Formularios/Formulario/componentCatalog/FormPDF/Formulario.xcdl" title="Formulario" tooltip="Formulario/componentCatalog/FormPDF/Formulario.xcdl" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
-</editor>
-<editor id="fuego.editor.fuegoobject" name="Campo.xcdl" partName="Campo" path="D:/workspace/BSC/Formularios/Formulario/componentCatalog/FormPDF/Campo.xcdl" title="Campo" tooltip="Formulario/componentCatalog/FormPDF/Campo.xcdl" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Formulario/componentCatalog/FormPDF/Campo.xcdl"/>
 </editor>
 </editors>
 <views>
@@ -63,7 +59,9 @@
 <view id="org.eclipse.debug.ui.DebugView" partName="Depurar">
 <viewState/>
 </view>
-<view id="fuego.eclipse.studio.views.PropertiesView" partName="Propiedades"/>
+<view id="fuego.eclipse.studio.views.PropertiesView" partName="Propiedades">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Puntos de interrupción">
 <viewState>
 <isTrackingSelection value="false"/>
@@ -155,7 +153,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.16605553" ratioLeft="317" ratioRight="1592" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.73475933" ratioLeft="687" ratioRight="248" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problemas"/>
 <page content="fuego.eclipse.studio.views.DocumentationView" label="Documentación"/>
 <page content="fuego.eclipse.studio.views.LogViewerView" label="Visor de registros"/>
@@ -199,66 +197,64 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.eclipse.processEditor" path="/Formulario/processes/TestForm.xpdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Campo.xcdl"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Campo.xcdl"/>
 </editors>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="1"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="1"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="2"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="2"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="2"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="2"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="2"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="2"/>
-<item historyLabel="TestForm" index="0"/>
+<item historyLabel="Campo" index="2"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="3"/>
-<item historyLabel="TestForm" index="0"/>
+<item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="3"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="3"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="3"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="3"/>
-<item historyLabel="TestForm" index="0"/>
+<item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="4"/>
-<item historyLabel="TestForm" index="0"/>
+<item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="5"/>
-<item historyLabel="TestForm" index="0"/>
+<item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="5"/>
-<item historyLabel="TestForm" index="0"/>
+<item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="5"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="6"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="6"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="6"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="6"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="6"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="7"/>
-<item historyLabel="TestForm" index="0"/>
-<item historyLabel="Formulario" index="7"/>
-<item historyLabel="Campo" index="8"/>
-<item active="true" historyLabel="Formulario" index="7"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Campo" index="6"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Campo" index="6"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="5"/>
+<item historyLabel="TestForm" index="1"/>
+<item active="true" historyLabel="Formulario" index="5"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>

@@ -21,10 +21,31 @@
 			<sourceCode language="Java1">if (arg.nombre.trim().empty) throw new Exception(&quot;FormPDF Error: Argumento invalido para el constructor de Formulario. El nombre del formulario no puede estar vacio.&quot;);
 this.nombre = arg.nombre;
 this.getFormData();
-
-</sourceCode>
+this.getFormFields();</sourceCode>
 		</method>
-		<method name="getFormData" flags="clientavailable public">
+		<method name="addCampo" flags="clientavailable public">
+			<arg name="campo" description="" flags="in" type="String"/>
+			<arg name="valor" description="" flags="in" type="String"/>
+			<variables>
+				<variable name="index" type="Int"/>
+			</variables>
+			<sourceCode language="Java1">if (arg.campo.trim().empty || arg.campo == null) throw new Exception(&quot;Error in FormPDF addCampo. label no puede estar vacia&quot;);
+// if already added throw exception
+
+Campo newCampo = null;
+foreach(field in this.campos) {	if (field.label.toLowerCase() == arg.campo.toLowerCase()) {
+		newCampo = (Campo)clone(field);
+		index = this.campos.indexOf(element : field);
+	}}
+
+display(newCampo);
+if (newCampo == null) throw new Exception(&quot;Error in FormPDF addCampo. El campo que se intenta agregar, no se encuentra en el catalogo de la base de datos.&quot;);
+if (newCampo.esRequerido &amp;&amp; arg.valor.trim().empty) throw new Exception(&quot;Error in FormPDF addCampo. El campo que se intenta agregar es requerido, el valor no puede estar vacio.&quot;);
+
+this.campos[index].isAdded = true;
+this.campos[index].valor = valor;</sourceCode>
+		</method>
+		<method name="getFormData" flags="public server disableclient">
 			<variables>
 				<variable name="queryResult" type="Iterator(Any[Any])"/>
 			</variables>
@@ -42,6 +63,21 @@ if (this.id.trim().empty) throw new Exception(&quot;Error in FormPDF getFormData
 if (this.descripcion.trim().empty) throw new Exception(&quot;Error in FormPDF getFormData. descripcion no puede estar vacio&quot;);
 if (this.path.trim().empty) throw new Exception(&quot;Error in FormPDF getFormData. path id no puede estar vacio&quot;);
 </sourceCode>
+		</method>
+		<method name="getFormFields" flags="public server disableclient">
+			<variables>
+				<variable name="queryResult" type="Iterator(Any[Any])"/>
+			</variables>
+			<sourceCode language="Java1">if (this.id.trim().empty) throw new Exception(&quot;Error in FormPDF getFormFields. id no puede estar vacio&quot;);
+
+String query = &quot;select * from campo where id_formulario = ?&quot;;
+queryResult = DynamicSQL.executeQuery(sentence : query, implname : &quot;Mysql-Formularios&quot;, inParameters : { this.id } );
+
+this.campos.clear();
+
+foreach(res in queryResult){
+	this.campos.extend(id : (String)res[&quot;id&quot;], id_formulario : (String)res[&quot;id_formulario&quot;], label : (String)res[&quot;label&quot;], esRequerido : (boolean)res[&quot;es_requerido&quot;]);
+}</sourceCode>
 		</method>
 	</methods>
 </component>
