@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.5.3" build="101199"?>
+<component name="Controller" description="" versionID="Version 6.5 " flags="cloneable replaceable" type="xobject">
+	<inherit class="Any" flags="public"/>
+	<inherit class="Fuego.Internal.FuegoObject" flags="public hidden"/>
+	<inherit class="Fuego.Internal.XODelegate" flags="public delegated hidden"/>
+	<objectProperty name="generateBitSets" value="true"/>
+	<objectProperty name="generateStubs" value="true"/>
+	<objectProperty name="packagePrefix" value="xobject"/>
+	<attributes/>
+	<methods>
+		<method name="Controller" flags="static clientavailable">
+			<outputArgument name="return" description="" flags="retval" type="Formulario.Controller"/>
+			<sourceCode language="Java1"/>
+		</method>
+	</methods>
+</component>

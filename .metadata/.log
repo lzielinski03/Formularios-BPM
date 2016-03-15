@@ -1,0 +1,294 @@
+!SESSION 2016-03-11 13:58:28.626 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-11 13:58:55.130
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-11 13:58:55.130
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-11 13:58:55.130
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-11 13:58:55.317
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-11 13:58:55.317
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+!SESSION 2016-03-14 07:07:48.583 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\workspace\BSC\Formularios
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-03-14 07:07:49.548
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 07:07:49.804
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 07:07:49.804
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 07:07:49.804
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 07:07:50.032
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 07:07:50.032
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+
+!ENTRY org.eclipse.ui 4 0 2016-03-14 07:44:52.025
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Cannot make visible a disposed component)
+	at org.eclipse.swt.SWT.error(SWT.java:3563)
+	at org.eclipse.swt.SWT.error(SWT.java:3481)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:126)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3659)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3296)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+Caused by: java.lang.IllegalStateException: Cannot make visible a disposed component
+	at fuego.ui.UiComponent.setVisible(UiComponent.java:822)
+	at fuego.ui.Dialog.setVisible(Dialog.java:218)
+	at fuego.editor.WebDebuggerClient$1.run(WebDebuggerClient.java:136)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	... 22 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-14 07:46:48.574
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Cannot make visible a disposed component)
+	at org.eclipse.swt.SWT.error(SWT.java:3563)
+	at org.eclipse.swt.SWT.error(SWT.java:3481)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:126)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3659)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3296)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+Caused by: java.lang.IllegalStateException: Cannot make visible a disposed component
+	at fuego.ui.UiComponent.setVisible(UiComponent.java:822)
+	at fuego.ui.Dialog.setVisible(Dialog.java:218)
+	at fuego.editor.WebDebuggerClient$1.run(WebDebuggerClient.java:136)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	... 22 more
+!SESSION 2016-03-14 07:47:47.973 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 07:47:50.196
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 07:47:50.196
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 07:47:50.196
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 07:47:50.402
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 07:47:50.402
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+!SESSION 2016-03-14 08:38:21.526 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:38:23.891
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:38:23.891
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:38:23.891
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:38:24.097
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:38:24.097
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+
+!ENTRY org.eclipse.ui 4 0 2016-03-14 08:41:23.233
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Cannot make visible a disposed component)
+	at org.eclipse.swt.SWT.error(SWT.java:3563)
+	at org.eclipse.swt.SWT.error(SWT.java:3481)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:126)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3659)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3296)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+Caused by: java.lang.IllegalStateException: Cannot make visible a disposed component
+	at fuego.ui.UiComponent.setVisible(UiComponent.java:822)
+	at fuego.ui.Dialog.setVisible(Dialog.java:218)
+	at fuego.editor.WebDebuggerClient$1.run(WebDebuggerClient.java:136)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	... 22 more
+!SESSION 2016-03-14 08:41:32.015 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:41:33.626
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:41:33.626
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:41:33.626
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:41:33.829
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:41:33.829
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+!SESSION 2016-03-14 08:45:34.838 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:45:36.390
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:45:36.390
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:45:36.390
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:45:36.594
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:45:36.594
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+!SESSION 2016-03-14 08:47:37.341 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:47:38.826
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:47:38.826
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:47:38.826
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:47:39.038
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:47:39.038
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+!SESSION 2016-03-14 08:50:10.238 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:50:11.875
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:50:11.875
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:50:11.875
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 08:50:12.075
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 08:50:12.075
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+!SESSION 2016-03-14 12:32:43.552 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\workspace\BSC\Formularios
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 12:32:44.346
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 12:32:44.347
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 12:32:44.347
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 12:32:44.601
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 12:32:44.601
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'
+!SESSION 2016-03-14 13:33:34.470 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\workspace\BSC\Formularios
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 13:33:35.230
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 13:33:35.231
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 13:33:35.231
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-14 13:33:35.570
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-14 13:33:35.570
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'

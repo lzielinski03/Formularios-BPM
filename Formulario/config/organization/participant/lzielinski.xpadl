@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.5.3" build="101199"?>
+<FDIObject>
+	<DirHumanParticipant>
+		<id>lzielinski</id>
+		<firstName>Leonardo</firstName>
+		<lastName>Zielinski</lastName>
+		<displayName>lzielinski</displayName>
+		<receivesMail>false</receivesMail>
+		<status>A</status>
+		<timezone>America/Rio_Branco</timezone>
+		<cost>0.0</cost>
+		<efficiency>80</efficiency>
+		<rolesAssignment>
+			<roleAssignment>
+				<roleId>Admin</roleId>
+				<permissions>255</permissions>
+				<category>0</category>
+			</roleAssignment>
+		</rolesAssignment>
+	</DirHumanParticipant>
+</FDIObject>

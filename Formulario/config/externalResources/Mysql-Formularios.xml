@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.5.3" build="101199"?>
+<externalResource name="Mysql-Formularios" type="SQL" subtype="MYSQL">
+	<property name="jdbc.pool.idle_timeout" value="5"/>
+	<property name="jdbc.pool.entry.max" value="10"/>
+	<property name="jdbc.host" value="localhost"/>
+	<property name="jdbc.database" value="formularios"/>
+	<property name="user" value="root"/>
+	<property name="jdbc.port" value="3306"/>
+	<property name="jdbc.pool.min" value="0"/>
+	<property name="jdbc.pool.maxopencursors" value="50"/>
+	<property name="password" value="&lt;encrypted&gt;JhDkaw=="/>
+	<property name="jdbc.xa" value="false"/>
+	<property name="jdbc.pool.max" value="10"/>
+</externalResource>

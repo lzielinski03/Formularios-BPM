@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.5.3" build="101199"?>
+<component name="Formulario" description="" versionID="Version 6.5 " flags="cloneable replaceable" type="xobject">
+	<inherit class="Any" flags="public"/>
+	<inherit class="Fuego.Internal.FuegoObject" flags="public hidden"/>
+	<inherit class="Fuego.Internal.XODelegate" flags="public delegated hidden"/>
+	<objectProperty name="generateBitSets" value="true"/>
+	<objectProperty name="generateStubs" value="true"/>
+	<objectProperty name="packagePrefix" value="xobject"/>
+	<attributes>
+		<array type="FormPDF.Campo" name="campos" flags="hassetter hasgetter public" position="5"/>
+		<String name="descripcion" flags="hassetter hasgetter public includeincheck" position="3"/>
+		<String name="id" flags="hassetter hasgetter public includeincheck" position="2"/>
+		<String name="nombre" flags="hassetter hasgetter public includeincheck" position="1"/>
+		<String name="path" flags="hassetter hasgetter public includeincheck" position="4"/>
+	</attributes>
+	<methods>
+		<method name="Formulario" flags="static clientavailable">
+			<arg name="nombre" description="" flags="in" type="String"/>
+			<outputArgument name="return" description="" flags="retval" type="FormPDF.Formulario"/>
+			<sourceCode language="Java1">if (arg.nombre.trim().empty) throw new Exception(&quot;FormPDF Error: Argumento invalido para el constructor de Formulario. El nombre del formulario no puede estar vacio.&quot;);
+this.nombre = arg.nombre;
+this.getFormData();
+
+</sourceCode>
+		</method>
+		<method name="getFormData" flags="clientavailable public">
+			<variables>
+				<variable name="queryResult" type="Iterator(Any[Any])"/>
+			</variables>
+			<sourceCode language="Java1">String query = &quot;select * from formulario where nombre = ?&quot;;
+
+queryResult = DynamicSQL.executeQuery(sentence : query, implname : &quot;Mysql-Formularios&quot;, inParameters : { this.nombre } );
+
+foreach(res in queryResult){
+	this.id = (String)res[&quot;id&quot;];
+	this.descripcion = (String)res[&quot;descripcion&quot;];
+	this.path = (String)res[&quot;path&quot;];
+}
+
+if (this.id.trim().empty) throw new Exception(&quot;Error in FormPDF getFormData. id no puede estar vacio&quot;);
+if (this.descripcion.trim().empty) throw new Exception(&quot;Error in FormPDF getFormData. descripcion no puede estar vacio&quot;);
+if (this.path.trim().empty) throw new Exception(&quot;Error in FormPDF getFormData. path id no puede estar vacio&quot;);
+</sourceCode>
+		</method>
+	</methods>
+</component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.5.3" build="101199"?>
+<component name="Formulario" description="" versionID="Version 6.5 " flags="cloneable replaceable" type="xobject">
+	<inherit class="Any" flags="public"/>
+	<inherit class="Fuego.Internal.FuegoObject" flags="public hidden"/>
+	<inherit class="Fuego.Internal.XODelegate" flags="public delegated hidden"/>
+	<objectProperty name="generateBitSets" value="true"/>
+	<objectProperty name="generateStubs" value="true"/>
+	<objectProperty name="packagePrefix" value="xobject"/>
+	<attributes>
+		<String name="descripcion" flags="hassetter hasgetter public" position="3"/>
+		<Int length="32" defaultValue="0" name="id" flags="hassetter hasgetter public required includeincheck" position="1"/>
+		<String name="nombre" flags="hassetter hasgetter public" position="2"/>
+		<String name="path" flags="hassetter hasgetter public" position="4"/>
+	</attributes>
+	<methods>
+		<method name="Formulario" flags="static clientavailable">
+			<outputArgument name="return" description="" flags="retval" type="FormPDF.Model.Formulario"/>
+		</method>
+	</methods>
+</component>
