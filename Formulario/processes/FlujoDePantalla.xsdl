@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fuego version="6.5.3" build="101199"?>
+<xpdl:Package Name="ALBPMPackage-FlujoDePantalla" Id="FlujoDePantalla" xmlns:albpm="http://www.albpm.com/2007/albpm.XPDL2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xpdl="http://www.wfmc.org/2004/XPDL2.0alpha" >
+    <xpdl:PackageHeader>
+        <xpdl:XPDLVersion>
+            2.0</xpdl:XPDLVersion>
+        <xpdl:Vendor>
+            BEA Aqualogic BPM</xpdl:Vendor>
+        <xpdl:Created>
+            16-mar-2016 13:25:10</xpdl:Created>
+        <xpdl:VendorExtensions>
+            <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
+        </xpdl:VendorExtensions>
+    </xpdl:PackageHeader>
+    <xpdl:ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <xpdl:Pools>
+        <xpdl:Pool Id="ALBPMPool" BoundaryVisible="false" Orientation="VERTICAL">
+            <xpdl:Lanes>
+                <xpdl:Lane Name="AutomaticHandler" Id="AutomaticHandler">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="240.0" IsVisible="false">
+                            <xpdl:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="true"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="es" label="AutomaticHandler"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="es">
+                                    AutomaticHandler</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+            </xpdl:Lanes>
+        </xpdl:Pool>
+    </xpdl:Pools>
+    <xpdl:WorkflowProcesses>
+        <xpdl:WorkflowProcess Id="FlujoDePantalla" Name="FlujoDePantalla" DefaultStartActivityId="Begin">
+            <xpdl:ProcessHeader/>
+            <xpdl:RedefinableHeader>
+                <xpdl:Author>
+                    lzielinski</xpdl:Author>
+                <xpdl:Version>
+                    0</xpdl:Version>
+            </xpdl:RedefinableHeader>
+            <xpdl:Participants>
+                <xpdl:Participant Id="Admin" Name="Admin">
+                    <xpdl:ParticipantType Type="ROLE"/>
+                </xpdl:Participant>
+                <xpdl:Participant Id="lzielinski" Name="lzielinski">
+                    <xpdl:ParticipantType Type="HUMAN"/>
+                    <xpdl:Description>
+                        lzielinski</xpdl:Description>
+                </xpdl:Participant>
+            </xpdl:Participants>
+            <xpdl:Applications/>
+            <xpdl:ActivitySets/>
+            <xpdl:Activities>
+                <xpdl:Activity Name="Begin" Id="Begin">
+                    <xpdl:Event>
+                        <xpdl:StartEvent Trigger="None"/>
+                    </xpdl:Event>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="120.0" YCoordinate="120.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="BEGIN"/>
+                                <albpm:BooleanFeature name="autocomplete" value="true"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:StringFeature name="targetForNonCreatedInstances" value="DO_NOT_CREATE"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                            </albpm:FeatureSet>
+                            <albpm:ArgumentMappings>
+                                <albpm:ArgumentMapping name="BeginIn" type="IN" language="Fuego"/>
+                            </albpm:ArgumentMappings>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="es" label="Inicio"/>
+                                </albpm:LocalizationLabels>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="End" Id="End">
+                    <xpdl:Event>
+                        <xpdl:EndEvent/>
+                    </xpdl:Event>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="120.0" YCoordinate="280.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="END"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="handlesOutArguments" value="true"/>
+                            </albpm:FeatureSet>
+                            <albpm:ArgumentMappings>
+                                <albpm:ArgumentMapping name="EndOut" type="OUT" language="Fuego"/>
+                            </albpm:ArgumentMappings>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="es" label="Finalización"/>
+                                </albpm:LocalizationLabels>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+            </xpdl:Activities>
+            <xpdl:Transitions>
+                <xpdl:Transition Id="BeginToEnd" Name="BeginToEnd" From="Begin" To="End">
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="120.0" YCoordinate="120.0"/>
+                            <xpdl:Coordinates XCoordinate="120.0" YCoordinate="280.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="UNCONDITIONAL"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                        </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+            </xpdl:Transitions>
+            <xpdl:Extensions>
+                <albpm:ALBPMExtensions>
+                    <albpm:Component>
+                        &lt;component name=&quot;FlujoDePantalla&quot;
+	description=&quot;&quot;
+	versionID=&quot;Version 6.5 &quot;
+	flags=&quot;cloneable&quot;
+	type=&quot;xobject&quot;&gt;
+	&lt;inherit
+		class=&quot;Fuego.Internal.ScreenFlow&quot;
+		flags=&quot;&quot;/&gt;
+	&lt;objectProperty name=&quot;initAllFields&quot;
+		value=&quot;true&quot;/&gt;
+	&lt;objectProperty name=&quot;javaClassName&quot;
+		value=&quot;xobject.Fuego__AutoGen__Screenflows__.__&quot;/&gt;
+	&lt;objectProperty name=&quot;javaSerialId&quot;
+		value=&quot;4278124286&quot;/&gt;
+	&lt;objectProperty name=&quot;methodPrefix&quot;
+		value=&quot;&quot;/&gt;
+	&lt;objectProperty name=&quot;package&quot;
+		value=&quot;xobject.Fuego__AutoGen__Screenflows__&quot;/&gt;
+	&lt;attributes/&gt;
+	&lt;methods&gt;
+		&lt;method name=&quot;FlujoDePantalla&quot;
+			flags=&quot;static&quot;&gt;
+			&lt;outputArgument name=&quot;return&quot;
+				description=&quot;&quot;
+				flags=&quot;retval&quot;
+				type=&quot;FlujoDePantalla&quot;/&gt;
+		&lt;/method&gt;
+	&lt;/methods&gt;
+&lt;/component&gt;</albpm:Component>
+                    <albpm:CorrelationSets/>
+                    <albpm:Localization>
+                        <albpm:LocalizationLabels>
+                            <albpm:LocalizedLabel language="es" label="Flujo de pantalla"/>
+                        </albpm:LocalizationLabels>
+                        <albpm:LocalizationDescriptions>
+                            <albpm:LocalizationDescription language="es">
+                            </albpm:LocalizationDescription>
+                        </albpm:LocalizationDescriptions>
+                    </albpm:Localization>
+                    <albpm:FeatureSet>
+                        <albpm:StringFeature name="GreedyExecutionMode" value="default"/>
+                        <albpm:BooleanFeature name="atomic" value="false"/>
+                        <albpm:StringFeature name="generatesEvents" value="GENERATE_INTERACTIVE_EVENTS"/>
+                        <albpm:BooleanFeature name="horizontal" value="true"/>
+                        <albpm:BooleanFeature name="instanceScreenflow" value="false"/>
+                        <albpm:StringFeature name="scale" value="1.0"/>
+                        <albpm:BooleanFeature name="sharePredefineVariables" value="true"/>
+                        <albpm:BooleanFeature name="useExceptionOrder" value="true"/>
+                        <albpm:StringFeature name="variation" value="Default"/>
+                    </albpm:FeatureSet>
+                </albpm:ALBPMExtensions>
+            </xpdl:Extensions>
+        </xpdl:WorkflowProcess>
+    </xpdl:WorkflowProcesses>
+</xpdl:Package>

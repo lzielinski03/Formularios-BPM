@@ -20,6 +20,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="fuego.eclipse.screenflowEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="fuego.editor.fuegoobject" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="fuego.eclipse.processEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -33,27 +35,26 @@
 <presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="fuego.eclipse.processEditor" name="TestForm.xpdl" partName="TestForm" path="D:/workspace/BSC/Formularios/Formulario/processes/TestForm.xpdl" title="TestForm" tooltip="Formulario/processes/TestForm.xpdl" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="fuego.eclipse.processEditor" name="TestForm.xpdl" partName="TestForm" path="D:/workspace/BSC/Formularios/Formulario/processes/TestForm.xpdl" title="TestForm" tooltip="Formulario/processes/TestForm.xpdl" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Formulario/processes/TestForm.xpdl"/>
 </editor>
-<editor activePart="true" focus="true" id="fuego.editor.fuegoobject" name="Formulario.xcdl" partName="Formulario" path="D:/workspace/BSC/Formularios/Formulario/componentCatalog/FormPDF/Formulario.xcdl" title="Formulario" tooltip="Formulario/componentCatalog/FormPDF/Formulario.xcdl" workbook="DefaultEditorWorkbook">
+<editor id="fuego.editor.fuegoobject" name="Formulario.xcdl" partName="Formulario" path="D:/workspace/BSC/Formularios/Formulario/componentCatalog/FormPDF/Formulario.xcdl" title="Formulario" tooltip="Formulario/componentCatalog/FormPDF/Formulario.xcdl" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
+</editor>
+<editor id="fuego.eclipse.screenflowEditor" name="FlujoDePantalla.xsdl" partName="Flujo de pantalla" path="D:/workspace/BSC/Formularios/Formulario/processes/FlujoDePantalla.xsdl" title="Flujo de pantalla" tooltip="Formulario/processes/FlujoDePantalla.xsdl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Formulario/processes/FlujoDePantalla.xsdl"/>
 </editor>
 </editors>
 <views>
-<view id="fuego.eclipse.studio.views.SimulationView" partName="Simulación"/>
 <view id="fuego.eclipse.studio.views.ProjectNavigatorView" partName="Navegador de proyecto">
 <viewState/>
 </view>
-<view id="fuego.eclipse.studio.views.DocumentationView" partName="Documentación"/>
 <view id="fuego.eclipse.studio.views.VariablesView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Esquema">
 <viewState/>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Depurar">
@@ -62,13 +63,22 @@
 <view id="fuego.eclipse.studio.views.PropertiesView" partName="Propiedades">
 <viewState/>
 </view>
+<view id="fuego.eclipse.studio.views.LogViewerView" partName="Visor de registros">
+<viewState/>
+</view>
+<view id="fuego.eclipse.studio.views.SimulationView" partName="Simulación">
+<viewState/>
+</view>
+<view id="fuego.eclipse.studio.views.DocumentationView" partName="Documentación">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Esquema">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Puntos de interrupción">
 <viewState>
 <isTrackingSelection value="false"/>
 </viewState>
-</view>
-<view id="fuego.eclipse.studio.views.LogViewerView" partName="Visor de registros">
-<viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problemas">
 <viewState columnWidth0="458" columnWidth1="78" columnWidth2="153" columnWidth3="63" columnWidth4="0" horizontalPosition="0" verticalPosition="0">
@@ -80,7 +90,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="fuego.editor.fuegoobject" activePerspective="studioPerspective">
+<perspectives activePart="fuego.eclipse.processEditor" activePerspective="studioPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="fuego.eclipse.studio.StudioPerspective" id="studioPerspective" label="BPM"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -149,17 +159,19 @@
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.16605553" ratioLeft="317" ratioRight="1592" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.73475933" ratioLeft="687" ratioRight="248" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<folder activePageID="fuego.eclipse.studio.views.LogViewerView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problemas"/>
 <page content="fuego.eclipse.studio.views.DocumentationView" label="Documentación"/>
 <page content="fuego.eclipse.studio.views.LogViewerView" label="Visor de registros"/>
 <page content="fuego.eclipse.studio.views.SimulationView" label="Simulación"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Puntos de interrupción"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Depurar"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
@@ -199,13 +211,16 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.eclipse.processEditor" path="/Formulario/processes/TestForm.xpdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Campo.xcdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" path="/Formulario/componentCatalog/FormPDF/Campo.xcdl"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.eclipse.screenflowEditor" path="/Formulario/processes/FlujoDePantalla.xsdl"/>
 </editors>
-<item historyLabel="Campo" index="2"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario" index="0"/>
+<item historyLabel="TestForm" index="1"/>
+<item historyLabel="Formulario.xcdl" index="2">
+<position/>
+</item>
+<item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="0"/>
@@ -220,41 +235,37 @@
 <item historyLabel="TestForm" index="1"/>
 <item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="3"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="3"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="4"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
-<item historyLabel="Campo" index="6"/>
-<item historyLabel="Formulario" index="5"/>
-<item historyLabel="Campo" index="6"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Formulario" index="0"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
+<item historyLabel="Flujo de pantalla" index="3"/>
 <item historyLabel="TestForm" index="1"/>
-<item historyLabel="Formulario" index="5"/>
-<item historyLabel="TestForm" index="1"/>
-<item active="true" historyLabel="Formulario" index="5"/>
+<item historyLabel="Flujo de pantalla" index="3"/>
+<item historyLabel="Formulario" index="0"/>
+<item active="true" historyLabel="TestForm" index="1"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -272,14 +283,17 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" name="Campo.xcdl" tooltip="Formulario/componentCatalog/FormPDF/Campo.xcdl">
-<persistable path="/Formulario/componentCatalog/FormPDF/Campo.xcdl"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.eclipse.screenflowEditor" name="FlujoDePantalla.xsdl" tooltip="Formulario/processes/FlujoDePantalla.xsdl">
+<persistable path="/Formulario/processes/FlujoDePantalla.xsdl"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" name="Formulario.xcdl" tooltip="Formulario/componentCatalog/FormPDF/Formulario.xcdl">
 <persistable path="/Formulario/componentCatalog/FormPDF/Formulario.xcdl"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.eclipse.processEditor" name="TestForm.xpdl" tooltip="Formulario/processes/TestForm.xpdl">
 <persistable path="/Formulario/processes/TestForm.xpdl"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="fuego.editor.fuegoobject" name="Campo.xcdl" tooltip="Formulario/componentCatalog/FormPDF/Campo.xcdl">
+<persistable path="/Formulario/componentCatalog/FormPDF/Campo.xcdl"/>
 </file>
 </mruList>
 </workbench>

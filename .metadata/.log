@@ -475,3 +475,21 @@ Caused by: java.lang.IllegalStateException: Cannot make visible a disposed compo
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
 	... 22 more
+!SESSION 2016-03-16 12:21:47.426 -----------------------------------------------
+eclipse.buildId=M20071023-1652
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2016-03-16 12:21:52.245
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-16 12:21:52.245
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.removeAnnotations', categoryId='fuego.editor.eclipse.category.annotations'
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-16 12:21:52.245
+!MESSAGE Commands should really have a category: plug-in='fuego.editor.eclipse', id='fuego.editor.eclipse.commands.toggleComment', categoryId='fuego.editor.eclipse.category.code'
+
+!ENTRY org.eclipse.ui 2 0 2016-03-16 12:21:52.670
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-03-16 12:21:52.670
+!MESSAGE The class was not null but retarget was set to true: plug-in='fuego.eclipse.studio', id='fuego.designer.action.PrintPreviewAction', class='fuego.eclipse.studio.actions.EclipseActionDelegate'

@@ -33,17 +33,24 @@ this.getFormFields();</sourceCode>
 // if already added throw exception
 
 Campo newCampo = null;
-foreach(field in this.campos) {	if (field.label.toLowerCase() == arg.campo.toLowerCase()) {
+foreach(field in this.campos) {
+	if (field.label.toLowerCase() == arg.campo.toLowerCase()) {
 		newCampo = (Campo)clone(field);
 		index = this.campos.indexOf(element : field);
-	}}
+	}
+}
 
-display(newCampo);
 if (newCampo == null) throw new Exception(&quot;Error in FormPDF addCampo. El campo que se intenta agregar, no se encuentra en el catalogo de la base de datos.&quot;);
 if (newCampo.esRequerido &amp;&amp; arg.valor.trim().empty) throw new Exception(&quot;Error in FormPDF addCampo. El campo que se intenta agregar es requerido, el valor no puede estar vacio.&quot;);
 
 this.campos[index].isAdded = true;
 this.campos[index].valor = valor;</sourceCode>
+		</method>
+		<method name="generar" flags="clientavailable public">
+			<sourceCode language="Java1">this.validateDataBeforeSend();
+
+
+//send( this.id, this.nombre, this.descripcion, this.path, this.campos);</sourceCode>
 		</method>
 		<method name="getFormData" flags="public server disableclient">
 			<variables>
@@ -77,6 +84,17 @@ this.campos.clear();
 
 foreach(res in queryResult){
 	this.campos.extend(id : (String)res[&quot;id&quot;], id_formulario : (String)res[&quot;id_formulario&quot;], label : (String)res[&quot;label&quot;], esRequerido : (boolean)res[&quot;es_requerido&quot;]);
+}</sourceCode>
+		</method>
+		<method name="validateDataBeforeSend" flags="clientavailable public">
+			<sourceCode language="Java1">if (this.id == null || this.id.trim().empty) throw new RuntimeException(&quot;Error in FormPDF validateDataBeforeSend. id no puede estar vacio.&quot;);
+if (this.nombre == null || this.nombre.trim().empty) throw new RuntimeException(&quot;Error in FormPDF validateDataBeforeSend. nombre no puede estar vacio.&quot;);
+if (this.descripcion == null || this.descripcion.trim().empty) throw new RuntimeException(&quot;Error in FormPDF validateDataBeforeSend. descripcion no puede estar vacio.&quot;);
+if (this.path == null || this.path.trim().empty) throw new RuntimeException(&quot;Error in FormPDF validateDataBeforeSend. path no puede estar vacio.&quot;);
+
+foreach(campo in this.campos) {
+	if(!campo.isAdded) throw new RuntimeException(&quot;Error in FormPDF validateDataBeforeSend. Campo &quot; + campo.label + &quot; no agregado.&quot;);
+	if(campo.esRequerido &amp;&amp; campo.valor.trim().empty) throw new RuntimeException(&quot;Error in FormPDF validateDataBeforeSend.  Campo &quot; + campo.label + &quot; requerido.&quot;);
 }</sourceCode>
 		</method>
 	</methods>

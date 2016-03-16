@@ -7,7 +7,7 @@
         <xpdl:Vendor>
             BEA Aqualogic BPM</xpdl:Vendor>
         <xpdl:Created>
-            15-mar-2016 13:03:02</xpdl:Created>
+            16-mar-2016 13:38:03</xpdl:Created>
         <xpdl:VendorExtensions>
             <xpdl:VendorExtension ToolId="ALBPM" schemaLocation="http://www.albpm.com/2007/albpm.XPDL2 file:ALBPM_XPDL.xsd"/>
         </xpdl:VendorExtensions>
@@ -35,6 +35,29 @@
                             <albpm:LocalizationDescriptions>
                                 <albpm:LocalizationDescription language="es">
                                     AutomaticHandler</albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Lane>
+                <xpdl:Lane Name="Admin" Id="Admin">
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" Width="313.0" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="495.0" YCoordinate="0.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:BooleanFeature name="virtual" value="false"/>
+                            <albpm:StringFeature name="paramVar" value=""/>
+                            <albpm:BooleanFeature name="parametric" value="false"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationLabels>
+                                <albpm:LocalizedLabel language="es" label="Admin"/>
+                            </albpm:LocalizationLabels>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="es">
+                                    Admin</albpm:LocalizationDescription>
                             </albpm:LocalizationDescriptions>
                         </albpm:Localization>
                     </albpm:ALBPMExtensions>
@@ -159,9 +182,11 @@
                     <xpdl:Implementation>
                         <xpdl:No/>
                     </xpdl:Implementation>
+                    <xpdl:Performer>
+                        Admin</xpdl:Performer>
                     <xpdl:NodeGraphicsInfos>
-                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="false">
-                            <xpdl:Coordinates XCoordinate="40.0" YCoordinate="40.0"/>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Admin" IsVisible="false">
+                            <xpdl:Coordinates XCoordinate="680.0" YCoordinate="320.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -181,13 +206,123 @@
                         </albpm:ALBPMExtensions>
                     </xpdl:Extensions>
                 </xpdl:Activity>
+                <xpdl:Activity Name="Interactiva" Id="Interactiva">
+                    <xpdl:Implementation>
+                        <xpdl:Task>
+                            <xpdl:TaskUser>
+                                <xpdl:Performers>
+                                    <xpdl:Performer>
+                                        Admin</xpdl:Performer>
+                                </xpdl:Performers>
+                                <xpdl:MessageIn Id="Interactiva_in_message"/>
+                                <xpdl:MessageOut Id="Interactiva_out_message"/>
+                            </xpdl:TaskUser>
+                        </xpdl:Task>
+                    </xpdl:Implementation>
+                    <xpdl:Performer>
+                        Admin</xpdl:Performer>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Admin" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="640.0" YCoordinate="200.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="INTERACTIVE"/>
+                                <albpm:IntegerFeature name="maxInstances" value="100"/>
+                                <albpm:BooleanFeature name="unlimitedCopies" value="true"/>
+                                <albpm:BooleanFeature name="abortable" value="false"/>
+                                <albpm:BooleanFeature name="assignable" value="false"/>
+                                <albpm:BooleanFeature name="autocomplete" value="false"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:BooleanFeature name="suspendable" value="false"/>
+                                <albpm:BooleanFeature name="userSelectsTransition" value="false"/>
+                            </albpm:FeatureSet>
+                            <albpm:ActivityTasks>
+                                <albpm:ActivityTask name="Interactiva" type="DISPLAY">
+                                    <albpm:FeatureSet>
+                                        <albpm:BooleanFeature name="mandatory" value="true"/>
+                                        <albpm:BooleanFeature name="readOnly" value="false"/>
+                                        <albpm:BooleanFeature name="repeatable" value="false"/>
+                                    </albpm:FeatureSet>
+                                    <albpm:DisplayType>
+                                        <albpm:FeatureSet>
+                                            <albpm:StringFeature name="method" value="interactiva"/>
+                                            <albpm:StringFeature name="buttons" value="Aceptar"/>
+                                            <albpm:StringFeature name="value" value="&quot;exception &quot; + holder"/>
+                                            <albpm:StringFeature name="default" value="Aceptar"/>
+                                            <albpm:StringFeature name="codeLanguage" value="Java1"/>
+                                            <albpm:StringFeature name="version" value="1.1"/>
+                                        </albpm:FeatureSet>
+                                        <albpm:Title>
+                                            <albpm:Localization>
+                                                <albpm:LocalizationLabels>
+                                                    <albpm:LocalizedLabel language="es" label="&quot;Error&quot;"/>
+                                                </albpm:LocalizationLabels>
+                                            </albpm:Localization>
+                                        </albpm:Title>
+                                    </albpm:DisplayType>
+                                    <albpm:Localization>
+                                        <albpm:LocalizationLabels>
+                                            <albpm:LocalizedLabel language="es" label="Exception"/>
+                                        </albpm:LocalizationLabels>
+                                    </albpm:Localization>
+                                </albpm:ActivityTask>
+                            </albpm:ActivityTasks>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="es" label="Exception"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="es">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
+                <xpdl:Activity Name="Fixer" Id="Fixer">
+                    <xpdl:Implementation>
+                        <xpdl:No/>
+                    </xpdl:Implementation>
+                    <xpdl:Performer>
+                        Admin</xpdl:Performer>
+                    <xpdl:NodeGraphicsInfos>
+                        <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="Admin" IsVisible="true">
+                            <xpdl:Coordinates XCoordinate="560.0" YCoordinate="80.0"/>
+                        </xpdl:NodeGraphicsInfo>
+                    </xpdl:NodeGraphicsInfos>
+                    <xpdl:Extensions>
+                        <albpm:ALBPMExtensions>
+                            <albpm:FeatureSet>
+                                <albpm:StringFeature name="type" value="GRAB"/>
+                                <albpm:BooleanFeature name="abortable" value="true"/>
+                                <albpm:BooleanFeature name="assignable" value="false"/>
+                                <albpm:StringFeature name="generatesEvents" value="PROCESS_DEFAULT"/>
+                                <albpm:StringFeature name="grabType" value="GG"/>
+                                <albpm:BooleanFeature name="suspendable" value="true"/>
+                                <albpm:BooleanFeature name="userSelectsTransition" value="true"/>
+                            </albpm:FeatureSet>
+                            <albpm:Localization>
+                                <albpm:LocalizationLabels>
+                                    <albpm:LocalizedLabel language="es" label="Fixer"/>
+                                </albpm:LocalizationLabels>
+                                <albpm:LocalizationDescriptions>
+                                    <albpm:LocalizationDescription language="es">
+                                    </albpm:LocalizationDescription>
+                                </albpm:LocalizationDescriptions>
+                            </albpm:Localization>
+                        </albpm:ALBPMExtensions>
+                    </xpdl:Extensions>
+                </xpdl:Activity>
                 <xpdl:Activity Name="End" Id="End">
                     <xpdl:Event>
                         <xpdl:EndEvent/>
                     </xpdl:Event>
                     <xpdl:NodeGraphicsInfos>
                         <xpdl:NodeGraphicsInfo ToolId="ALBPM" LaneId="AutomaticHandler" IsVisible="true">
-                            <xpdl:Coordinates XCoordinate="360.0" YCoordinate="120.0"/>
+                            <xpdl:Coordinates XCoordinate="440.0" YCoordinate="120.0"/>
                         </xpdl:NodeGraphicsInfo>
                     </xpdl:NodeGraphicsInfos>
                     <xpdl:Extensions>
@@ -229,7 +364,7 @@
                     <xpdl:ConnectorGraphicsInfos>
                         <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
                             <xpdl:Coordinates XCoordinate="240.0" YCoordinate="120.0"/>
-                            <xpdl:Coordinates XCoordinate="360.0" YCoordinate="120.0"/>
+                            <xpdl:Coordinates XCoordinate="440.0" YCoordinate="120.0"/>
                         </xpdl:ConnectorGraphicsInfo>
                     </xpdl:ConnectorGraphicsInfos>
                     <albpm:ALBPMExtensions>
@@ -238,6 +373,37 @@
                             <albpm:BooleanFeature name="collapseMessage" value="false"/>
                             <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
                         </albpm:FeatureSet>
+                    </albpm:ALBPMExtensions>
+                </xpdl:Transition>
+                <xpdl:Transition Id="ProcessGroupToInteractiva" Name="ProcessGroupToInteractiva" From="ProcessGroup" To="Interactiva">
+                    <xpdl:Condition Type="EXCEPTION">
+                        <xpdl:Expression>
+                            Java.Lang.Exception</xpdl:Expression>
+                    </xpdl:Condition>
+                    <xpdl:ConnectorGraphicsInfos>
+                        <xpdl:ConnectorGraphicsInfo ToolId="ALBPM">
+                            <xpdl:Coordinates XCoordinate="680.0" YCoordinate="320.0"/>
+                            <xpdl:Coordinates XCoordinate="640.0" YCoordinate="200.0"/>
+                        </xpdl:ConnectorGraphicsInfo>
+                    </xpdl:ConnectorGraphicsInfos>
+                    <albpm:ALBPMExtensions>
+                        <albpm:FeatureSet>
+                            <albpm:StringFeature name="albpmType" value="EXCEPTION"/>
+                            <albpm:BooleanFeature name="collapseMessage" value="false"/>
+                            <albpm:StringFeature name="curve" value="-2147483648,-2147483648"/>
+                            <albpm:StringFeature name="exception" value="Java.Lang.Exception"/>
+                            <albpm:StringFeature name="exceptionCauseHolderVariableName" value="holder"/>
+                            <albpm:IntegerFeature name="exceptionOrder" value="0"/>
+                            <albpm:StringFeature name="exceptionSignature" value="java.lang.Exception"/>
+                            <albpm:StringFeature name="exceptionType" value="java"/>
+                            <albpm:StringFeature name="userName" value="error"/>
+                        </albpm:FeatureSet>
+                        <albpm:Localization>
+                            <albpm:LocalizationDescriptions>
+                                <albpm:LocalizationDescription language="es">
+                                </albpm:LocalizationDescription>
+                            </albpm:LocalizationDescriptions>
+                        </albpm:Localization>
                     </albpm:ALBPMExtensions>
                 </xpdl:Transition>
             </xpdl:Transitions>
@@ -263,7 +429,13 @@
 		value=&quot;CIL_&quot;/&gt;
 	&lt;objectProperty name=&quot;package&quot;
 		value=&quot;Formulario.TestForm.Default_1_0&quot;/&gt;
-	&lt;attributes/&gt;
+	&lt;attributes&gt;
+		&lt;object
+			type=&quot;Java.Lang.Exception&quot;
+			name=&quot;holder&quot;
+			flags=&quot;hassetter hasgetter public&quot;
+			position=&quot;1&quot;/&gt;
+	&lt;/attributes&gt;
 	&lt;methods&gt;
 		&lt;method name=&quot;Instance&quot;
 			flags=&quot;static&quot;&gt;
@@ -275,20 +447,33 @@
 		&lt;method name=&quot;init&quot;
 			flags=&quot;server&quot;&gt;
 			&lt;sourceCode
-				language=&quot;Java1&quot;&gt;Formulario formPDF = new Formulario(nombre: &amp;quot;FCAHO023&amp;quot;);
+				language=&quot;Java1&quot;&gt;try{
+	Formulario formPDF = new Formulario(nombre: &amp;quot;FCAHO023&amp;quot;);
+	
+	String result = &amp;quot;&amp;quot;;
+	result = result + &amp;quot;nombre:\t\t\t&amp;quot; + formPDF.nombre + &amp;quot;\n&amp;quot;;
+	result = result + &amp;quot;id: \t\t\t\t\t&amp;quot; + formPDF.id + &amp;quot;\n&amp;quot;;
+	result = result + &amp;quot;descripcion:\t\t&amp;quot; + formPDF.descripcion + &amp;quot;\n&amp;quot;;
+	result = result + &amp;quot;path:\t\t\t\t&amp;quot; + formPDF.path + &amp;quot;\n&amp;quot;;
+	result = result + &amp;quot;Cantidad campos:\t\t&amp;quot; + formPDF.campos.length() + &amp;quot;\n&amp;quot;;
+	
+	foreach(campo in formPDF.campos) {
+		result = result + &amp;quot;\tCampo &amp;quot; + campo.label + &amp;quot;, Requerido: &amp;quot; + campo.esRequerido + &amp;quot;\n&amp;quot;;
+	}
+	//display(result);
+	//formPDF.addCampo(&amp;quot;campo 2&amp;quot;, &amp;quot;valor&amp;quot;);
+	formPDF.addCampo(&amp;quot;campo 1&amp;quot;, &amp;quot;valor&amp;quot;);
+	
+	formPDF.generar();
+} catch(Exception e) {	//display(&amp;quot;Exception: &amp;quot; + e.message);
+	//throw new Java.Lang.RuntimeException(&amp;quot;error&amp;quot;);
+	//e.printStackTrace();
+	logMessage(e.message);
+	throw new Exception(&amp;quot;Ocurrio un error en la generacion de formularios, comuniquese.&amp;quot;, e);
 
-String result = &amp;quot;&amp;quot;;
-result = result + &amp;quot;nombre:\t\t\t&amp;quot; + formPDF.nombre + &amp;quot;\n&amp;quot;;
-result = result + &amp;quot;id: \t\t\t\t\t&amp;quot; + formPDF.id + &amp;quot;\n&amp;quot;;
-result = result + &amp;quot;descripcion:\t\t&amp;quot; + formPDF.descripcion + &amp;quot;\n&amp;quot;;
-result = result + &amp;quot;path:\t\t\t\t&amp;quot; + formPDF.path + &amp;quot;\n&amp;quot;;
-result = result + &amp;quot;Cantidad campos:\t\t&amp;quot; + formPDF.campos.length() + &amp;quot;\n&amp;quot;;
-
-foreach(campo in formPDF.campos) {
-	result = result + &amp;quot;\tCampo &amp;quot; + campo.label + &amp;quot;, Requerido: &amp;quot; + campo.esRequerido + &amp;quot;\n&amp;quot;;
-}
-display(result);
-formPDF.addCampo(&amp;quot;campo 22&amp;quot;, &amp;quot;valor&amp;quot;);&lt;/sourceCode&gt;
+} catch(Java.Lang.RuntimeException e) {
+// Thread.sleep(arg1 : 444444);
+}&lt;/sourceCode&gt;
 		&lt;/method&gt;
 	&lt;/methods&gt;
 &lt;/component&gt;</albpm:Component>
